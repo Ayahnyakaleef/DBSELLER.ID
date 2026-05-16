@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>DB Seller Indonesia | KTP & Passport Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>DB Seller Indonesia | KTP & Paspor Digital</title>
+    
+    <!-- GOOGLE FONT BALOO (Commercial Use ✅) -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font pendukung -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
+        /* FONT SUFI ADRES IKON dari DaFont */
+        @font-face {
+            font-family: 'SufiAdresIkon';
+            src: url('fonts/SufiAdresIkon.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,184 +28,173 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #f0f4f8;
-            color: #1a2c3e;
+            font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+            background: #f4f9fd;
+            color: #1a2e3f;
         }
 
-        /* Header Premium */
         .header {
-            background: linear-gradient(135deg, #0a2540 0%, #1b4f6e 100%);
+            background: linear-gradient(135deg, #0a2b3f 0%, #1b5a7a 100%);
             color: white;
-            padding: 2.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
         }
 
-        .header::before {
-            content: "✦";
-            position: absolute;
-            font-size: 180px;
-            opacity: 0.05;
-            bottom: -40px;
-            right: -30px;
-            font-weight: 300;
-        }
-
-        .header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.3px;
+        /* Container logo + nama toko */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             margin-bottom: 0.5rem;
+            flex-wrap: wrap;
         }
 
-        .header h1 span {
+        /* LOGO menggunakan Sufi Adres Ikon */
+        .logo-icon {
+            font-family: 'SufiAdresIkon', sans-serif;
+            font-size: 3.5rem;
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Nama toko pake Baloo */
+        .logo-text {
+            font-family: 'Baloo Bhai 2', 'Baloo 2', cursive;
             font-weight: 800;
-            background: linear-gradient(135deg, #ffffff, #c8e2f5);
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff, #c8e2f5);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
         .header p {
-            opacity: 0.85;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 8px;
         }
 
         .trust-badge {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
+            gap: 10px;
             padding: 0.5rem 1.2rem;
             border-radius: 60px;
-            font-size: 0.8rem;
+            font-family: 'Inter', sans-serif;
             font-weight: 500;
-            margin-top: 1.2rem;
+            margin-top: 1rem;
         }
 
-        .trust-badge i {
-            font-size: 0.9rem;
-        }
-
-        /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
 
-        /* Banner promo */
         .promo-banner {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 1rem 1.2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-            border: 1px solid #e2edf2;
-            color: #1a5d7a;
+            background: white;
+            border-radius: 24px;
+            padding: 0.8rem 1rem;
+            text-align: center;
             font-weight: 600;
-        }
-
-        .promo-banner i {
-            font-size: 1.2rem;
-            color: #2c7da0;
-        }
-
-        /* Section header */
-        .section-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin: 2rem 0 1.2rem 0;
-            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            border: 1px solid #e0edf5;
+            color: #1b5a7a;
         }
 
         .section-title {
-            font-size: 1.4rem;
+            font-family: 'Baloo 2', cursive;
+            font-size: 1.6rem;
             font-weight: 700;
-            color: #0a2540;
-            border-left: 4px solid #2c7da0;
-            padding-left: 14px;
+            color: #0a2b3f;
+            border-left: 5px solid #1b5a7a;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Pricing Cards - clean style */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
             gap: 1.2rem;
             margin-bottom: 2.5rem;
         }
 
         .price-card {
             background: white;
-            border-radius: 24px;
-            padding: 1.4rem 0.8rem;
+            border-radius: 28px;
+            padding: 1.2rem 0.6rem;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-            transition: all 0.2s ease;
-            border: 1px solid #e6edf0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.2s;
+            border: 1px solid #deeaf0;
         }
 
         .price-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.1);
-            border-color: #cbdde6;
+            box-shadow: 0 12px 20px -8px rgba(0,0,0,0.1);
         }
 
         .price-card.featured {
-            border-top: 3px solid #2c7da0;
-            background: #fefefe;
+            border-top: 4px solid #f5b042;
+            background: #fffef8;
         }
 
         .price-badge {
-            background: #eef3fc;
-            color: #1a5d7a;
+            background: #fef0d8;
+            color: #b45f1b;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 800;
             display: inline-block;
-            padding: 4px 12px;
+            padding: 4px 14px;
             border-radius: 40px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .price-qty {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #0a2540;
+            font-family: 'Baloo Bhai 2', cursive;
+            font-weight: 600;
+            font-size: 1.2rem;
             margin: 8px 0;
+            color: #0f3b4f;
         }
 
         .price-value {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #1a5d7a;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #1b5a7a;
         }
 
         .price-value small {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 500;
-            color: #6f8f9f;
+            color: #6f9bb0;
         }
 
         .price-note {
             font-size: 0.7rem;
-            color: #6f8f9f;
-            margin-top: 8px;
+            color: #4f7c94;
+            margin-top: 6px;
         }
 
-        /* Catalog Grid */
         .catalog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
             gap: 1.8rem;
             margin: 1.5rem 0;
         }
@@ -200,30 +203,20 @@
             background: white;
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #e2edf5;
             transition: 0.2s;
-            border: 1px solid #e2edf2;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.1);
         }
 
         .product-img {
-            background: #f5f9fc;
-            aspect-ratio: 4 / 3;
+            background: #eef3f8;
+            aspect-ratio: 4/3;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-img i {
-            font-size: 3.2rem;
-            color: #8fbbd0;
         }
 
         .product-info {
@@ -231,53 +224,53 @@
         }
 
         .product-title {
-            font-weight: 800;
-            font-size: 1rem;
+            font-family: 'Baloo 2', cursive;
+            font-weight: 600;
+            font-size: 1.1rem;
             margin-bottom: 6px;
-            color: #0a2540;
         }
 
         .product-desc {
             font-size: 0.75rem;
-            color: #5e7e8f;
-            margin-bottom: 16px;
-            line-height: 1.4;
+            color: #597f96;
+            margin-bottom: 1rem;
         }
 
         .order-btn {
-            background: #0a2540;
+            background: #0f3b4f;
             color: white;
             border: none;
             width: 100%;
             padding: 10px 0;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            border-radius: 60px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: 0.2s;
         }
 
         .order-btn:hover {
-            background: #1b4f6e;
+            background: #236884;
             transform: scale(0.97);
         }
 
-        /* Garansi */
         .guarantee-box {
-            background: #ffffff;
-            border-radius: 24px;
+            background: white;
+            border-radius: 28px;
             padding: 1.5rem;
             text-align: center;
             margin: 2rem 0;
-            border: 1px solid #dce9ef;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #dcecf5;
         }
 
-        /* Kontak */
+        .guarantee-box h3 {
+            font-family: 'Baloo 2', cursive;
+            font-weight: 600;
+        }
+
         .contact-row {
             display: flex;
             flex-wrap: wrap;
@@ -293,44 +286,39 @@
             background: #25D366;
             color: white;
             padding: 12px 28px;
-            border-radius: 50px;
+            border-radius: 60px;
             text-decoration: none;
             font-weight: 700;
             transition: 0.2s;
         }
 
-        .tele-btn {
-            background: #0088cc;
-        }
-
-        .wa-btn:hover {
-            background: #128C7E;
-            transform: scale(1.02);
-        }
-        .tele-btn:hover {
-            background: #006699;
-            transform: scale(1.02);
-        }
+        .tele-btn { background: #0088cc; }
+        .wa-btn:hover { background: #128C7E; transform: scale(1.02); }
+        .tele-btn:hover { background: #006699; transform: scale(1.02); }
 
         footer {
-            background: #0a2540;
-            color: #bdd4e0;
+            background: #0a2b3f;
+            color: #bddae8;
             text-align: center;
-            padding: 1.4rem;
+            padding: 1.2rem;
             font-size: 0.7rem;
-            margin-top: 2rem;
         }
 
         @media (max-width: 640px) {
-            .header h1 { font-size: 1.5rem; }
             .price-value { font-size: 1.3rem; }
+            .logo-icon { width: 60px; height: 60px; font-size: 2.5rem; }
+            .logo-text { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>DB SELLER <span>INDONESIA</span></h1>
+    <div class="logo-container">
+        <!-- LOGO menggunakan Sufi Adres Ikon (huruf 'A' menghasilkan ikon) -->
+        <div class="logo-icon">A</div>
+        <div class="logo-text">DB SELLER INDONESIA</div>
+    </div>
     <p>Produk digital • KTP • Paspor • Dan Lainnya</p>
     <div class="trust-badge">
         <i class="fas fa-shield-alt"></i> Garansi 1x24 Jam • Refund dengan bukti
@@ -339,18 +327,14 @@
 
 <div class="container">
     <div class="promo-banner">
-        <i class="fas fa-chart-line"></i> 
-        <span>Minimal Buy 10pcs. Semakin banyak, semakin hemat!</span>
-        <i class="fas fa-gem"></i>
+        📢 Semakin banyak pemesanan, semakin hemat! <i class="fas fa-chart-line"></i>
     </div>
 
-    <!-- Harga tanpa kata grosir -->
-    <div class="section-header">
-        <div class="section-title">💸 Price List </div>
-    </div>
+    <!-- PRICE LIST -->
+    <div class="section-title">📄 Price List</div>
     <div class="pricing-grid">
         <div class="price-card">
-            <div class="price-qty">📜  10 → 29pcs (KTP)</div>
+            <div class="price-qty">📜 10 → 29pcs (KTP)</div>
             <div class="price-value">Rp2.500 <small>/dokumen</small></div>
             <div class="price-note">Harga satuan</div>
         </div>
@@ -360,7 +344,7 @@
             <div class="price-note">≈ Rp1.667/Pcs</div>
         </div>
         <div class="price-card featured">
-            <div class="price-badge">BEST SELLER</div>
+            <div class="price-badge">⭐ BEST SELLER ⭐</div>
             <div class="price-qty">📑 65pcs (KTP)</div>
             <div class="price-value">Rp100.000</div>
             <div class="price-note">≈ Rp1.538/Pcs • hemat 38%</div>
@@ -372,63 +356,54 @@
         </div>
         <div class="price-card">
             <div class="price-qty">🗃️ 500pcs (KTP)</div>
-            <div class="price-qty">Rp700.000</div>
-            <div class="price-qty">≈ Rp1.400/Pcs</div>
+            <div class="price-value">Rp700.000</div>
+            <div class="price-note">≈ Rp1.400/Pcs</div>
+        </div>
     </div>
 
-    <!-- Katalog Produk (KTP, Paspor) dengan gambar dari Google Drive -->
-    <div class="section-header">
-        <div class="section-title">🪪 Katalog KTP & Paspor Digital</div>
-    </div>
+    <!-- KATALOG PRODUK -->
+    <div class="section-title">🛒 Katalog Produk</div>
     <div class="catalog-grid">
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
-            </div>
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');"></div>
             <div class="product-info">
-                <div class="product-title">📇 KTP (e-KTP)</div>
-                <div class="product-desc">Desain rapi, siap cetak, file JPG/PNG resolusi tinggi — cocok untuk berbagai keperluan digital.</div>
-                <button class="order-btn" data-product="KTP"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
+                <div class="product-title">📇 KTP Elektronik</div>
+                <div class="product-desc">Desain rapi resolusi tinggi, siap cetak atau keperluan digital.</div>
+                <button class="order-btn" data-product="KTP Elektronik"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
-            </div>
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');"></div>
             <div class="product-info">
-                <div class="product-title">🛂 Pasport</div>
-                <div class="product-desc">Desain sampul dan halaman dalam sesuai standar, bisa untuk preview dan keperluan administratif.</div>
-                <button class="order-btn" data-product="Pasport"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
+                <div class="product-title">🛂 Paspor 48 Halaman</div>
+                <div class="product-desc">Desain sesuai standar, file digital aman dan rapi.</div>
+                <button class="order-btn" data-product="Paspor 48 Halaman"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
-            </div>
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');"></div>
             <div class="product-info">
                 <div class="product-title">📄 Paket KTP + PASSPORT</div>
-                <div class="product-desc">Paket 2 in 1: KTP dan PASSPORT Harga Menyesuaikan Kebutuhan.</div>
+                <div class="product-desc">Paket 2 in 1. Harga menyesuaikan kebutuhan Anda.</div>
                 <button class="order-btn" data-product="Paket KTP + PASSPORT"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
     </div>
 
-    <!-- Garansi 1x24 jam -->
+    <!-- GARANSI -->
     <div class="guarantee-box">
-        <i class="fas fa-clock" style="font-size: 1.8rem; color: #1b4f6e;"></i>
-        <h3 style="margin: 8px 0 4px; color:#0a2540;">Garansi 1x24 Jam</h3>
+        <i class="fas fa-clock" style="font-size: 2rem; color: #1b5a7a;"></i>
+        <h3>Garansi 1x24 Jam</h3>
         <p>Jika file tidak sesuai deskripsi atau ada kendala teknis, kirim bukti screenshot — uang kembali 100%.</p>
-        <small style="color:#4f7e96;">*Syarat: klaim maksimal 24 jam setelah file diterima</small>
+        <small>*Syarat: klaim maksimal 24 jam setelah file diterima</small>
     </div>
 
-    <!-- Kontak -->
-    <div class="guarantee-box" style="background:#fafeff;">
-        <i class="fas fa-comments" style="font-size: 1.6rem; color: #2c7da0;"></i>
-        <h3 style="margin: 6px 0;">Hubungi Langsung</h3>
+    <!-- KONTAK -->
+    <div class="guarantee-box" style="background: #fbfefe;">
+        <h3><i class="fas fa-comments"></i> Hubungi Langsung</h3>
         <div class="contact-row">
-            <a href="https://wa.me/6289604340789?text=Halo%20DB%20SELLER%20INDONESIA%2C%20saya%20mau%20pesan%20produk%20digital" class="wa-btn" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp 👈🏼
-            </a>
-            <a href="https://t.me/SellerDbTrusted" class="tele-btn" target="_blank">
-                <i class="fab fa-telegram-plane"></i> Telegram 👈🏼
-            </a>
+            <a href="https://wa.me/6289604340789?text=Halo%20DB%20SELLER%20INDONESIA%2C%20saya%20mau%20pesan%20produk%20digital" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://t.me/SellerDbTrusted" class="tele-btn" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
         </div>
     </div>
 </div>
@@ -444,7 +419,7 @@
     orderBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             let product = this.getAttribute('data-product') || 'produk digital';
-            let message = `Halo DB SELLER INDONESIA, saya tertarik dengan produk *${product}*. %0A%0ASaya mau pesan dengan ketentuan harga :%0A🔸 <30 pcs = Rp2.500/pcs%0A🔸 30 pcs = Rp50.000%0A🔸 65 pcs = Rp100.000%0A🔸 100 pcs = Rp150.000%0A%0AMohon info stok dan cara pembayaran. Terima kasih.`;
+            let message = `Halo DB SELLER INDONESIA, saya tertarik dengan produk *${product}*. %0A%0ASaya mau pesan dengan ketentuan harga :%0A📜 10-29pcs = Rp2.500/pcs%0A📄 30pcs = Rp50.000%0A📑 65pcs = Rp100.000%0A🗂️ 100pcs = Rp150.000%0A🗃️ 500pcs = Rp700.000%0A%0AMohon info stok dan cara pembayaran. Terima kasih.`;
             window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
         });
     });
