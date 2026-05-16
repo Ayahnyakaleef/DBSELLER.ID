@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>DB SELLER INDONESIA | Pusat Grosir Dokumen Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <title>DB Seller Indonesia | KTP & Passport Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -14,204 +14,278 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #f4f7fc;
-            color: #1a2e3a;
-            line-height: 1.5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #f0f4f8;
+            color: #1a2c3e;
         }
 
-        /* header */
+        /* Header Premium */
         .header {
-            background: linear-gradient(120deg, #0a2e28, #125a4a);
+            background: linear-gradient(135deg, #0a2540 0%, #1b4f6e 100%);
             color: white;
-            padding: 2rem 1.2rem;
+            padding: 2.5rem 1.5rem;
             text-align: center;
-            border-bottom-left-radius: 28px;
-            border-bottom-right-radius: 28px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
+
+        .header::before {
+            content: "✦";
+            position: absolute;
+            font-size: 180px;
+            opacity: 0.05;
+            bottom: -40px;
+            right: -30px;
+            font-weight: 300;
+        }
+
         .header h1 {
             font-size: 2rem;
-            letter-spacing: -0.5px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 span {
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #c8e2f5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .header p {
+            opacity: 0.85;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 1.2rem;
+        }
+
+        .trust-badge i {
+            font-size: 0.9rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Banner promo */
+        .promo-banner {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
-        }
-        .header h1 i {
-            font-size: 2rem;
-        }
-        .header p {
-            opacity: 0.9;
-            margin-top: 10px;
-            font-weight: 500;
-        }
-        .badge {
-            background: #ffc107;
-            color: #1e3a2f;
-            border-radius: 60px;
-            padding: 5px 16px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 14px;
-        }
-
-        /* container */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        /* price grid */
-        .price-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 1.4rem;
-            margin: 2rem 0;
-        }
-        .price-card {
-            background: white;
-            border-radius: 32px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08);
-            transition: all 0.2s;
-            border: 1px solid #e0ede8;
-        }
-        .price-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
-        }
-        .price-card.populer {
-            border: 2px solid #f7b32b;
-            background: #fffef7;
-        }
-        .ribbon {
-            background: #f7b32b;
-            display: inline-block;
-            padding: 4px 14px;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            color: #2d2a1f;
-            margin-bottom: 12px;
-        }
-        .price-qty {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #1f5e4c;
-        }
-        .price-amount {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin: 10px 0;
-        }
-        .price-amount small {
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: gray;
-        }
-        .per-piece {
-            background: #eef3f0;
-            display: inline-block;
-            padding: 4px 14px;
-            border-radius: 30px;
-            font-size: 0.7rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e2edf2;
+            color: #1a5d7a;
             font-weight: 600;
         }
 
-        /* katalog produk */
+        .promo-banner i {
+            font-size: 1.2rem;
+            color: #2c7da0;
+        }
+
+        /* Section header */
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 2rem 0 1.2rem 0;
+            flex-wrap: wrap;
+        }
+
         .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a2540;
+            border-left: 4px solid #2c7da0;
+            padding-left: 14px;
+        }
+
+        /* Pricing Cards - clean style */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.4rem 0.8rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+            border: 1px solid #e6edf0;
+        }
+
+        .price-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.1);
+            border-color: #cbdde6;
+        }
+
+        .price-card.featured {
+            border-top: 3px solid #2c7da0;
+            background: #fefefe;
+        }
+
+        .price-badge {
+            background: #eef3fc;
+            color: #1a5d7a;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 40px;
+            margin-bottom: 12px;
+        }
+
+        .price-qty {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2540;
+            margin: 8px 0;
+        }
+
+        .price-value {
             font-size: 1.7rem;
             font-weight: 800;
-            margin: 2rem 0 1.5rem 0;
-            border-left: 6px solid #1f5e4c;
-            padding-left: 16px;
+            color: #1a5d7a;
         }
+
+        .price-value small {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #6f8f9f;
+        }
+
+        .price-note {
+            font-size: 0.7rem;
+            color: #6f8f9f;
+            margin-top: 8px;
+        }
+
+        /* Catalog Grid */
         .catalog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1.8rem;
+            margin: 1.5rem 0;
         }
+
         .product-card {
             background: white;
-            border-radius: 28px;
+            border-radius: 24px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             transition: 0.2s;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
-            border: 1px solid #dde9e4;
+            border: 1px solid #e2edf2;
         }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+        }
+
         .product-img {
-            background: #eef2f0;
-            aspect-ratio: 4/3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #2b6a58;
+            background: #f5f9fc;
+            aspect-ratio: 4 / 3;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .product-img i {
-            font-size: 3.5rem;
-            color: #577e6e;
+            font-size: 3.2rem;
+            color: #8fbbd0;
         }
+
         .product-info {
             padding: 1.2rem;
         }
+
         .product-title {
             font-weight: 800;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 6px;
+            color: #0a2540;
         }
+
         .product-desc {
-            font-size: 0.8rem;
-            color: #516e7a;
-            margin-bottom: 15px;
+            font-size: 0.75rem;
+            color: #5e7e8f;
+            margin-bottom: 16px;
+            line-height: 1.4;
         }
-        .btn-order {
-            background: #0b3d33;
+
+        .order-btn {
+            background: #0a2540;
             color: white;
             border: none;
-            padding: 10px 0;
             width: 100%;
-            border-radius: 60px;
+            padding: 10px 0;
+            border-radius: 40px;
             font-weight: 600;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
         }
-        .btn-order:hover {
-            background: #1f6b58;
+
+        .order-btn:hover {
+            background: #1b4f6e;
             transform: scale(0.97);
         }
 
-        /* garantii + kontak */
-        .info-card {
-            background: linear-gradient(135deg, #ffffff, #fafefb);
-            border-radius: 32px;
+        /* Garansi */
+        .guarantee-box {
+            background: #ffffff;
+            border-radius: 24px;
             padding: 1.5rem;
-            margin: 2rem 0 1rem;
             text-align: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
-            border: 1px solid #cbe4dc;
+            margin: 2rem 0;
+            border: 1px solid #dce9ef;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
-        .contact-buttons {
+
+        /* Kontak */
+        .contact-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 18px;
             margin-top: 20px;
         }
+
         .wa-btn, .tele-btn {
             display: inline-flex;
             align-items: center;
@@ -219,15 +293,16 @@
             background: #25D366;
             color: white;
             padding: 12px 28px;
-            border-radius: 60px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             transition: 0.2s;
-            font-size: 1rem;
         }
+
         .tele-btn {
             background: #0088cc;
         }
+
         .wa-btn:hover {
             background: #128C7E;
             transform: scale(1.02);
@@ -236,164 +311,138 @@
             background: #006699;
             transform: scale(1.02);
         }
+
         footer {
-            background: #0c2b25;
-            color: #acccc2;
+            background: #0a2540;
+            color: #bdd4e0;
             text-align: center;
-            padding: 1.5rem;
+            padding: 1.4rem;
+            font-size: 0.7rem;
             margin-top: 2rem;
-            font-size: 0.75rem;
         }
-        @media (max-width: 600px) {
-            .price-qty { font-size: 1.3rem; }
-            .price-amount { font-size: 1.3rem; }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 1.5rem; }
+            .price-value { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>
-        <i class="fas fa-file-alt"></i> 
-        DB SELLER INDONESIA
-    </h1>
-    <p>Pusat Grosir Dokumen Digital &amp; Data • Terpercaya Sejak 2024</p>
-    <div class="badge">
-        <i class="fas fa-check-circle"></i> Garansi 1x24 Jam + Refund
+    <h1>DB SELLER <span>INDONESIA</span></h1>
+    <p>Dokumen digital • KTP • Paspor • Berkas elektronik</p>
+    <div class="trust-badge">
+        <i class="fas fa-shield-alt"></i> Garansi 1x24 Jam • Refund dengan bukti
     </div>
 </div>
 
 <div class="container">
-
-    <!-- promo running text sederhana -->
-    <div style="background:#e6f4ef; border-radius: 48px; padding: 12px; text-align: center; margin-bottom: 20px;">
-        <i class="fas fa-tags"></i> 📦 SEMAKIN BANYAK, SEMAKIN MURAH! <i class="fas fa-arrow-right"></i> Grosir Dokumen / File Siap Pakai
+    <div class="promo-banner">
+        <i class="fas fa-chart-line"></i> 
+        <span>Semakin banyak pemesanan, semakin hemat — tanpa batasan!</span>
+        <i class="fas fa-gem"></i>
     </div>
 
-    <!-- DAFTAR HARGA GROSIR -->
-    <h2 class="section-title"><i class="fas fa-tag"></i> Harga Grosir</h2>
-    <div class="price-grid">
+    <!-- Harga tanpa kata grosir -->
+    <div class="section-header">
+        <div class="section-title">📄 Skema Harga</div>
+    </div>
+    <div class="pricing-grid">
         <div class="price-card">
-            <div class="price-qty">🔹 <30 pcs</div>
-            <div class="price-amount">Rp 2.500 <small>/pcs</small></div>
-            <div class="per-piece">🎯 Harga eceran</div>
-        </div>
-        <div class="price-card">
-            <div class="price-qty">📦 30 pcs</div>
-            <div class="price-amount">Rp 50.000</div>
-            <div class="per-piece">≈ Rp1.667/pcs • hemat 33%</div>
-        </div>
-        <div class="price-card populer">
-            <div class="ribbon">⭐ BEST VALUE</div>
-            <div class="price-qty">📦 65 pcs</div>
-            <div class="price-amount">Rp 100.000</div>
-            <div class="per-piece">≈ Rp1.538/pcs • hemat 38%</div>
+            <div class="price-qty">🔹 Kurang dari 30</div>
+            <div class="price-value">Rp2.500 <small>/dokumen</small></div>
+            <div class="price-note">Harga satuan</div>
         </div>
         <div class="price-card">
-            <div class="price-qty">🚀 100 pcs</div>
-            <div class="price-amount">Rp 150.000</div>
-            <div class="per-piece">≈ Rp1.500/pcs • hemat 40% + bonus</div>
+            <div class="price-qty">📦 30 dokumen</div>
+            <div class="price-value">Rp50.000</div>
+            <div class="price-note">≈ Rp1.667/lembar</div>
+        </div>
+        <div class="price-card featured">
+            <div class="price-badge">BEST DEAL</div>
+            <div class="price-qty">✨ 65 dokumen</div>
+            <div class="price-value">Rp100.000</div>
+            <div class="price-note">≈ Rp1.538/lembar • hemat 38%</div>
+        </div>
+        <div class="price-card">
+            <div class="price-qty">🚀 100 dokumen</div>
+            <div class="price-value">Rp150.000</div>
+            <div class="price-note">≈ Rp1.500/lembar</div>
         </div>
     </div>
 
-    <!-- KATALOG PRODUK dengan FOTO DOKUMEN (contoh file digital) -->
-    <h2 class="section-title"><i class="fas fa-folder-open"></i> Katalog Produk Digital</h2>
-    <div class="catalog-grid" id="catalogGrid">
-        <!-- Product 1 : contoh dokumen pdf -->
+    <!-- Katalog Produk (KTP, Paspor) dengan gambar dari Google Drive -->
+    <div class="section-header">
+        <div class="section-title">🪪 Katalog KTP & Paspor Digital</div>
+    </div>
+    <div class="catalog-grid">
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://placehold.co/600x400/2e5f4f/white?text=KTP+Template'); background-size: cover;">
-                <!-- jika gambar gagal, fallback icon -->
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
             </div>
             <div class="product-info">
-                <div class="product-title">📄 Template Dokumen Legal</div>
-                <div class="product-desc">File .docx & .pdf, siap edit, desain rapi cocok untuk keperluan administrasi.</div>
-                <button class="btn-order" data-product="Template Dokumen Legal - 30pcs min order" data-product-id="prod1">
-                    <i class="fab fa-whatsapp"></i> Pesan via WA
-                </button>
+                <div class="product-title">📇 KTP Elektronik (e-KTP)</div>
+                <div class="product-desc">Desain rapi, siap cetak, file JPG/PNG resolusi tinggi — cocok untuk berbagai keperluan digital.</div>
+                <button class="order-btn" data-product="KTP Elektronik"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://placehold.co/600x400/1f5e4c/white?text=Database+Seller'); background-size: cover;"></div>
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
+            </div>
             <div class="product-info">
-                <div class="product-title">🗂️ Database Seller Eksklusif</div>
-                <div class="product-desc">Kumpulan data & referensi untuk reseller/ grosir, update 2026.</div>
-                <button class="btn-order" data-product="Database Seller Eksklusif" data-product-id="prod2">
-                    <i class="fab fa-whatsapp"></i> Pesan via WA
-                </button>
+                <div class="product-title">🛂 Paspor 48 Halaman</div>
+                <div class="product-desc">Desain sampul dan halaman dalam sesuai standar, bisa untuk preview dan keperluan administratif.</div>
+                <button class="order-btn" data-product="Paspor 48 Halaman"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://placehold.co/600x400/4b7c6e/white?text=Form+Surat'); background-size: cover;"></div>
-            <div class="product-info">
-                <div class="product-title">📑 Koleksi Form Surat</div>
-                <div class="product-desc">100+ macam surat (pernyataan, kuasa, bisnis) format doc & pdf.</div>
-                <button class="btn-order" data-product="Koleksi Form Surat" data-product-id="prod3">
-                    <i class="fab fa-whatsapp"></i> Pesan via WA
-                </button>
+            <div class="product-img" style="background-image: url('https://drive.google.com/uc?export=view&id=1RQEBR0cuNdGU156Sur8XZ-3iTJPqcULg');">
             </div>
-        </div>
-        <div class="product-card">
-            <div class="product-img" style="background-image: url('https://placehold.co/600x400/2e6b5c/white?text=ID+Card+Mockup'); background-size: cover;"></div>
             <div class="product-info">
-                <div class="product-title">🪪 Mockup ID Card / Dokumen</div>
-                <div class="product-desc">Source file PSD / Canva, editable, bebas pakai untuk preview.</div>
-                <button class="btn-order" data-product="Mockup ID Card" data-product-id="prod4">
-                    <i class="fab fa-whatsapp"></i> Pesan via WA
-                </button>
+                <div class="product-title">📄 Blangko KTP + Paspor Bundle</div>
+                <div class="product-desc">Paket 2 in 1: KTP dan paspor dalam 1 file .zip, lebih praktis untuk arsip digital.</div>
+                <button class="order-btn" data-product="Bundle KTP + Paspor"><i class="fab fa-whatsapp"></i> Pesan sekarang</button>
             </div>
         </div>
     </div>
 
-    <!-- GARANSI 1x24 jam -->
-    <div class="info-card">
-        <i class="fas fa-shield-alt" style="font-size: 2rem; color: #1f5e4c;"></i>
-        <h3 style="margin-top: 8px;">Garansi 1x24 Jam + Bukti Screenshot</h3>
-        <p>Jika produk tidak sesuai atau file corrupt, uang kembali 100% (wajib kirim bukti screenshot ke admin).</p>
-        <small style="color: gray;">Syarat & ketentuan berlaku | Klaim maksimal 1x24 jam setelah file dikirim.</small>
+    <!-- Garansi 1x24 jam -->
+    <div class="guarantee-box">
+        <i class="fas fa-clock" style="font-size: 1.8rem; color: #1b4f6e;"></i>
+        <h3 style="margin: 8px 0 4px; color:#0a2540;">Garansi 1x24 Jam</h3>
+        <p>Jika file tidak sesuai deskripsi atau ada kendala teknis, kirim bukti screenshot — uang kembali 100%.</p>
+        <small style="color:#4f7e96;">*Syarat: klaim maksimal 24 jam setelah file diterima</small>
     </div>
 
-    <!-- Kontak WhatsApp & Telegram -->
-    <div class="info-card" style="background: #ffffff;">
-        <i class="fas fa-headset"></i>
-        <h3>Hubungi Kami Sekarang</h3>
-        <div class="contact-buttons">
-            <a href="https://wa.me/6289604340789?text=Halo%20DB%20SELLER%20INDONESIA%2C%20saya%20mau%20order%20produk%20grosir" class="wa-btn" target="_blank">
+    <!-- Kontak -->
+    <div class="guarantee-box" style="background:#fafeff;">
+        <i class="fas fa-comments" style="font-size: 1.6rem; color: #2c7da0;"></i>
+        <h3 style="margin: 6px 0;">Hubungi Langsung</h3>
+        <div class="contact-row">
+            <a href="https://wa.me/6289604340789?text=Halo%20DB%20SELLER%20INDONESIA%2C%20saya%20mau%20pesan%20produk%20digital" class="wa-btn" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp 0896-0434-0789
             </a>
             <a href="https://t.me/SellerDbTrusted" class="tele-btn" target="_blank">
                 <i class="fab fa-telegram-plane"></i> Telegram @SellerDbTrusted
             </a>
         </div>
-        <p style="margin-top: 16px;">atau klik langsung tombol "Pesan via WA" di setiap produk.</p>
     </div>
 </div>
 
 <footer>
-    <p>© 2026 DB SELLER INDONESIA • Semua transaksi aman dan terpercaya • Garansi kepuasan pelanggan</p>
-    <p><i class="fas fa-store"></i> Toko online resmi grosir dokumen digital</p>
+    <p>© 2026 DB SELLER INDONESIA — KTP & Paspor Digital • File aman • Privasi terjaga</p>
 </footer>
 
 <script>
-    // fungsi untuk mengarahkan ke whatsapp dengan pesan otomatis
-    const buttons = document.querySelectorAll('.btn-order');
-    const waNumber = '6289604340789';  // nomor whatsapp tanpa '+'
+    const orderBtns = document.querySelectorAll('.order-btn');
+    const waNumber = '6289604340789';
     
-    buttons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            let productName = this.getAttribute('data-product') || 'Produk Digital';
-            let message = `Halo DB SELLER INDONESIA, saya tertarik dengan produk *${productName}*. %0A%0ASaya mau pesan dengan ketentuan harga :%0A🔹 <30 pcs = 2.500/pcs%0A🔹 30pcs = 50rb%0A🔹 65pcs = 100rb%0A🔹 100pcs = 150rb%0A%0AMohon info stok dan cara pembayaran. Terima kasih.`;
-            let url = `https://wa.me/${waNumber}?text=${message}`;
-            window.open(url, '_blank');
+    orderBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            let product = this.getAttribute('data-product') || 'produk digital';
+            let message = `Halo DB SELLER INDONESIA, saya tertarik dengan produk *${product}*. %0A%0ASaya mau pesan dengan ketentuan harga :%0A🔸 <30 pcs = Rp2.500/pcs%0A🔸 30 pcs = Rp50.000%0A🔸 65 pcs = Rp100.000%0A🔸 100 pcs = Rp150.000%0A%0AMohon info stok dan cara pembayaran. Terima kasih.`;
+            window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
         });
-    });
-
-    // tambahan fallback: jika gambar placeholder tidak muncul, ikon alternatif
-    const productImgs = document.querySelectorAll('.product-img');
-    productImgs.forEach(img => {
-        if(!img.style.backgroundImage || img.style.backgroundImage === 'none'){
-            img.style.display = 'flex';
-            img.innerHTML = '<i class="fas fa-file-image"></i>';
-        }
     });
 </script>
 
